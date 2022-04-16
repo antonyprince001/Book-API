@@ -1,4 +1,4 @@
 fileignoreconfig:
 - filename: src/main/resources/application.properties
-  checksum: 22c351ab6325ecf89b2b8d405aa27fac5b41058a33a920ee5bb01a2d841dbeb7
+  checksum: c100fac617f1010dc4a247200ebee8b7c1892de6e179474a597bc4f772cc6b16
 version: ""
