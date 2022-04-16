@@ -52,9 +52,10 @@ public class BookServiceTest {
     void shouldGetABookById() {
         BookService bookService = new BookService(bookRepository);
         Book book = new Book("Great Gatsby", "Scott Fitzgerald", 179.0f, 4.4f);
-        bookService.save(book);
+        Book savedBook  = bookService.save(book);
 
-        Book bookFetched = bookService.findById(18L);
+
+        Book bookFetched = bookService.findById(savedBook.getId());
 
         assertEquals(book.getAuthor(), bookFetched.getAuthor());
         assertEquals(book.getId(), bookFetched.getId());
@@ -67,11 +68,11 @@ public class BookServiceTest {
     void shouldDeleteABookById() {
         BookService bookService = new BookService(bookRepository);
         Book book = new Book("Great Gatsby", "Scott Fitzgerald", 179.0f, 4.4f);
-        bookService.save(book);
+        Book savedBook = bookService.save(book);
 
-        bookService.deleteById(28L);
+        bookService.deleteById(savedBook.getId());
 
-        assertThrows(NoSuchElementException.class, () -> bookService.findById(28L));
+        assertThrows(NoSuchElementException.class, () -> bookService.findById(savedBook.getId()));
     }
 
 
