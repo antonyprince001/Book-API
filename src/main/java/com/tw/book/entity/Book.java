@@ -1,4 +1,4 @@
-package com.tw.book;
+package com.tw.book.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

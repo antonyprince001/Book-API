@@ -1,5 +1,7 @@
-package com.tw.book;
+package com.tw.book.service;
 
+import com.tw.book.entity.Book;
+import com.tw.book.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
